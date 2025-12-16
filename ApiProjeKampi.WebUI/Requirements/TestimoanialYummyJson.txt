@@ -1,0 +1,39 @@
+﻿[
+  {
+    "nameSurname": "Ayşe Karaca",
+    "title": "Yemek Bloggerı",
+    "comment": "Sunumlar özenli, lezzetler harika! Özellikle şefin özel menüsü mutlaka denenmeli. Şehrin en iyi gastronomik deneyimlerinden biriydi.",
+    "imageUrl": "test"
+  },
+  {
+    "nameSurname": "Mehmet Arslan",
+    "title": "Girişimci",
+    "comment": "Hem ortamı hem de servis kalitesiyle beklentilerimi fazlasıyla karşıladı. Aile ve iş yemekleri için ideal bir mekan.",
+    "imageUrl": "test"
+  },
+  {
+    "nameSurname": "Selin Yıldız",
+    "title": "Dijital Pazarlama Uzmanı",
+    "comment": "Personel çok ilgiliydi ve yemekler çok tazeydi. Tatlı menüsüne ise bayıldım! Kesinlikle tekrar geleceğim.",
+    "imageUrl": "test"
+  },
+  {
+    "nameSurname": "Burak Demirer",
+    "title": "Fotoğrafçı",
+    "comment": "Ambiyans mükemmel! Dekorasyon ve atmosfer fotoğraflamak için bile gelinir. Yemekler de aynı derecede başarılı.",
+    "imageUrl": "test"
+  },
+  {
+    "nameSurname": "Elif Öztürk",
+    "title": "İnsan Kaynakları Uzmanı",
+    "comment": "Çalışanların güler yüzü ve hızlı servis beni çok etkiledi. Fiyat-performans açısından da oldukça iyi.",
+    "imageUrl": "test"
+  },
+  {
+    "nameSurname": "Caner Kılıç",
+    "title": "Mimar",
+    "comment": "Mekanın tasarımı çok şık ve modern. Şefin sunumları sanat eseri gibi. Arkadaşlarıma da tavsiye ettim.",
+    "imageUrl": "test"
+  }
+]
+

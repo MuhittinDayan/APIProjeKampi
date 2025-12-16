@@ -1,0 +1,51 @@
+﻿Metin 1
+
+Yummy, yalnızca lezzetli yemekler sunmakla kalmaz, aynı zamanda her lokmada özen ve kaliteyi hissettirir.
+Taptaze malzemeler, uzman şeflerin ellerinde eşsiz tariflere dönüşür. 
+Misafirlerimizin keyifli bir deneyim yaşaması için hijyen, servis ve konfor ön planda tutulur.
+Çünkü bizde yemek sadece doymak değil, mutlu anılar biriktirmektir.
+
+Metin 2
+
+Yummy’i seçmek, damak zevkinizi taze ve doğal malzemelerle buluşturmak demektir. 
+Bizim için her tabak, özenle hazırlanmış bir hikâye taşır. 
+Samimi atmosferimiz ve güler yüzlü ekibimizle, yemek yemeyi sıradanlıktan çıkarır, unutulmaz bir deneyime dönüştürürüz. 
+Yummy, lezzeti ve mutluluğu aynı sofrada bir araya getirir.
+
+Metin 3
+
+Yummy’de yemek, sadece lezzetten ibaret değildir; ruhunuza da dokunan bir deneyimdir.
+Özenle seçilmiş malzemeler, ustalıkla hazırlanarak sofralarınıza taşınır. 
+Kaliteli hizmet anlayışımız, sıcak ortamımız ve yenilikçi menümüzle fark yaratırız. 
+Yummy, sizi her seferinde tekrar gelmeye çağıran lezzet durağıdır.
+
+
+1. Veri Seti
+
+Başlık: Taptaze malzemelerle gerçek tatlar
+Metin: .Doğallığı koruyan seçimlerimizle sofranıza her gün güven ve lezzet taşırız
+
+2. Veri Seti
+
+Başlık: Samimi atmosfer, sıcak anılar
+Metin: Yummy’de yemek yalnızca doyum değil, unutulmaz bir buluşma anısıdır.
+
+3. Veri Seti
+
+Başlık: Ustaların elinden özenli tarifler
+Metin: Şeflerimizin incelikle hazırladığı her tabak size özel bir hikâye sunar.
+
+4. Veri Seti
+
+Başlık: Kaliteden ödün vermeyen hizmet
+Metin: Hijyen, hız ve güler yüz anlayışıyla her zaman en iyisini deneyimlersiniz.
+
+5. Veri Seti
+
+Başlık: Yenilikçi menüler, farklı tatlar
+Metin: Geleneksel tarifleri modern dokunuşlarla harmanlayarak yeni lezzetler yaratırız.
+
+6. Veri Seti
+
+Başlık: Herkes için keyifli bir deneyim
+Metin: Çocuklardan yetişkinlere, herkesin damak zevkine uygun seçenekler sunarız.

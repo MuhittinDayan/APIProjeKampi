@@ -1,0 +1,82 @@
+﻿[
+  {
+    "nameSurname": "Ahmet Yıldırım",
+    "email": "ahmet.yildirim@example.com",
+    "subject": "Rezervasyon Hakkında",
+    "messageDetails": "Cumartesi akşamı için iki kişilik rezervasyon yapmak istiyorum. Müsaitlik durumu nedir?",
+    "sendDate": "2025-01-12T14:23:00",
+    "isRead": true
+  },
+  {
+    "nameSurname": "Elif Demir",
+    "email": "elif.demir@example.com",
+    "subject": "Glutensiz Menü",
+    "messageDetails": "Glutensiz yemek seçenekleriniz var mı? Menünüzde göremedim, bilgi verebilir misiniz?",
+    "sendDate": "2025-01-13T09:15:00",
+    "isRead": false
+  },
+  {
+    "nameSurname": "Burak Aksoy",
+    "email": "burak.aksoy@example.com",
+    "subject": "Sipariş Gecikmesi",
+    "messageDetails": "Online siparişim 20 dakika gecikmeli geldi. Bilgilendirme yapılmadığı için şikayetimi iletmek istedim.",
+    "sendDate": "2025-01-13T18:47:00",
+    "isRead": true
+  },
+  {
+    "nameSurname": "Selin Kara",
+    "email": "selin.kara@example.com",
+    "subject": "Doğum Günü Organizasyonu",
+    "messageDetails": "10 kişilik doğum günü kutlaması için özel masa ayarlayabilir misiniz? Detayları görüşmek isterim.",
+    "sendDate": "2025-01-14T11:02:00",
+    "isRead": true
+  },
+  {
+    "nameSurname": "Kaan Özçelik",
+    "email": "kaan.ozcelik@example.com",
+    "subject": "Vejetaryen Seçenekler",
+    "messageDetails": "Menünüzdeki vejetaryen seçenekler hakkında bilgi alabilir miyim?",
+    "sendDate": "2025-01-14T16:30:00",
+    "isRead": false
+  },
+  {
+    "nameSurname": "Merve Kaplan",
+    "email": "merve.kaplan@example.com",
+    "subject": "Memnuniyet Mesajı",
+    "messageDetails": "Dün akşam restoranınıza geldik, yemekler ve hizmet harikaydı. Tüm ekibe teşekkür ederiz.",
+    "sendDate": "2025-01-15T10:12:00",
+    "isRead": true
+  },
+  {
+    "nameSurname": "Hüseyin Şahin",
+    "email": "huseyin.sahin@example.com",
+    "subject": "Menü Fiyatları",
+    "messageDetails": "Web sitenizdeki menü fiyatları güncel mi acaba?",
+    "sendDate": "2025-01-15T13:55:00",
+    "isRead": true
+  },
+  {
+    "nameSurname": "Zeynep Uçar",
+    "email": "zeynep.ucar@example.com",
+    "subject": "Motorlu Kurye Sorunu",
+    "messageDetails": "Kurye apartman girişine kadar gelmedi ve beni aşağı çağırdı. Bu durum hoş değildi, bilginize.",
+    "sendDate": "2025-01-16T17:40:00",
+    "isRead": false
+  },
+  {
+    "nameSurname": "Oğuzhan Polat",
+    "email": "oguzhan.polat@example.com",
+    "subject": "Alerjen Bilgisi",
+    "messageDetails": "Yer fıstığı alerjim var. Soslarınızda veya yemeklerinizde yer fıstığı bulunuyor mu?",
+    "sendDate": "2025-01-16T20:05:00",
+    "isRead": true
+  },
+  {
+    "nameSurname": "Ceren Yalçın",
+    "email": "ceren.yalcin@example.com",
+    "subject": "Masa Düzeni Talebi",
+    "messageDetails": "Hafta sonu kalabalık bir grup olarak gelmeyi planlıyoruz, geniş masa düzeni sağlanabilir mi?",
+    "sendDate": "2025-01-17T08:20:00",
+    "isRead": false
+  }
+]
