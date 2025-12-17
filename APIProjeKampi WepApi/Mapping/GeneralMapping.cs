@@ -21,7 +21,7 @@ namespace APIProjeKampi_WepApi.Mapping
             CreateMap<Feature,UpdateFeatureDto>().ReverseMap();
             CreateMap<Feature,GetByIdFeatureDto>().ReverseMap();
 
-            CreateMap<Message, ResultFeatureDto>().ReverseMap();
+            CreateMap<Message, ResultMessageDto>().ReverseMap();
             CreateMap<Message,CreateMessageDto>().ReverseMap();
             CreateMap<Message,UpdateMessageDto>().ReverseMap();
             CreateMap<Message,GetByIdMessageDto>().ReverseMap();
