@@ -1,9 +1,11 @@
 ﻿using APIProjeKampi_WepApi.Dtos.AboutDtos;
 using APIProjeKampi_WepApi.Dtos.CategoryDtos;
 using APIProjeKampi_WepApi.Dtos.FeatureDtos;
+using APIProjeKampi_WepApi.Dtos.ImageDtos;
 using APIProjeKampi_WepApi.Dtos.MessagedDtos;
 using APIProjeKampi_WepApi.Dtos.NotificationDtos;
 using APIProjeKampi_WepApi.Dtos.ProductDtos;
+using APIProjeKampi_WepApi.Dtos.ReservationDtos;
 using APIProjeKampi_WepApi.Entities;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
@@ -40,7 +42,17 @@ namespace APIProjeKampi_WepApi.Mapping
             CreateMap<About , ResultAboutDto>().ReverseMap();
             CreateMap<About , GetAboutByIdDto>().ReverseMap();
             CreateMap<About , UpdateAboutDto>().ReverseMap();
-            
+
+            CreateMap<Reservation, CreateReservationDto>().ReverseMap();
+            CreateMap<Reservation, ResultReservationDto>().ReverseMap();
+            CreateMap<Reservation, GetReservationByIdDto>().ReverseMap();
+            CreateMap<Reservation, UpdateReservationDto>().ReverseMap();
+
+            CreateMap<Image, ResultImageDto>().ReverseMap();
+            CreateMap<Image, CreateImageDto>().ReverseMap();
+            CreateMap<Image, UpdateImageDto>().ReverseMap();
+            CreateMap<Image, GetImageByIdDto>().ReverseMap();
+
 
         }
     }
