@@ -1,0 +1,80 @@
+﻿
+@{
+    ViewData["Title"] = "CreateRecipeWithGeminiAI";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<section class="section">
+    <div class="section-body">
+        <div class="row">
+            <div class="col-12 col-md-12 col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Gemini İle Yapay Zeka Destekli Yemek Tarifi Önerisi</h4>
+                    </div>
+                    <div class="card-body">
+                        <form method="post">
+                            <label>Elinizdeki Malzemeler ve Anahtar Kelimeler</label>
+                            <input type="text" name="prompt" class="form-control" placeholder="Örn: Tavuk, krema, mantar" />                            
+                            <br />
+                            <button class="btn btn-primary">Tarif Önerisi Oluştur</button>
+                        </form>
+                        <br /> <br />
+                        @if (ViewBag.recipe != null)
+                        {
+                            <hr />
+                            <div class="card border-0 shadow-lg mt-4">
+                                <div class="card-header bg-primary text-white">
+                                    <h4 class="mb-0"><i class="fas fa-utensils"></i> Şefin Özel Tarifi</h4>
+                                </div>
+                                <div class="card-body p-4 recipe-style">
+                                    @Html.Raw(ViewBag.recipe)
+                                </div>
+                            </div>
+                        }
+
+                        <style>
+                            /* Markdig'den gelen HTML etiketlerini süsleyelim */
+                            .recipe-style {
+                                /* Türkçe karakter desteği en iyi olan fontlar */
+                                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                                line-height: 1.8;
+                                color: #333;
+                            }
+                            .recipe-style {
+                                line-height: 1.8;
+                                color: #333;
+                            }
+
+                                .recipe-style h2 {
+                                    color: #2c3e50;
+                                    border-bottom: 2px solid #3498db;
+                                    padding-bottom: 10px;
+                                    margin-top: 20px;
+                                }
+
+                                .recipe-style strong {
+                                    color: #e67e22;
+                                    font-weight: bold;
+                                }
+
+                                .recipe-style ul, .recipe-style ol {
+                                    padding-left: 20px;
+                                    margin-bottom: 20px;
+                                }
+
+                                .recipe-style li {
+                                    margin-bottom: 8px;
+                                }
+                        </style>
+                        </style>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
