@@ -24,7 +24,7 @@ namespace ApiProjeKampi.WebUI.Controllers
             }
 
             // 2. YETKİLENDİRME: Google AI Studio'dan alınan benzersiz anahtar
-            var apiKey = "****************";
+            var apiKey = "";
 
             // 3. HTTP İSTEMCİSİ: Google sunucularına istek atmak için kullanılan nesne
             using var client = new HttpClient();
