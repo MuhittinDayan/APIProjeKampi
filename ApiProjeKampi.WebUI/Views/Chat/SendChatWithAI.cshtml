@@ -1,0 +1,115 @@
+﻿@{
+    ViewData["Title"] = "SendChatWithAI";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div id="chat" style="border:1px solid #ddd;border-radius:12px;padding:12px;min-height:280px;white-space:pre-wrap"></div>
+<div id="typing" style="opacity:.7;font-style:italic;margin-top:6px;display:none">Yazıyor...</div>
+
+<div style="display:flex;gap:8px;margin-top:12px">
+    <input id="messageInput" type="text" placeholder="Mesajınızı yazın..." style="flex:1;padding:8px" />
+    <button id="sendBtn">Gönder</button>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/8.0.0/signalr.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+<script>
+    const chat = document.getElementById('chat');
+    const typing = document.getElementById('typing');
+    const input = document.getElementById('messageInput');
+    const sendBtn = document.getElementById('sendBtn');
+
+    let bufEl = null;
+    let rawText = ""; // Incoming raw text buffer for AI
+    // pendingLocalMessages keeps count of messages we've already added locally,
+    // used to suppress duplicate server echo
+    const pendingLocalMessages = new Map();
+
+    const conn = new signalR.HubConnectionBuilder()
+        .withUrl("/chathub")
+        .withAutomaticReconnect()
+        .build();
+
+    function appendUserDiv(text) {
+        const div = document.createElement('div');
+        div.style.margin = '12px 0';
+        div.style.padding = '8px';
+        div.innerHTML = `<strong>Sen:</strong> ${text}`;
+        chat.appendChild(div);
+        chat.scrollTop = chat.scrollHeight;
+    }
+
+    conn.on("ReceiveUserEcho", (text) => {
+        // If we already added this message locally, skip duplicating the echo
+        const count = pendingLocalMessages.get(text) || 0;
+        if (count > 0) {
+            if (count === 1) pendingLocalMessages.delete(text);
+            else pendingLocalMessages.set(text, count - 1);
+            return;
+        }
+
+        // Otherwise append server echo
+        appendUserDiv(text);
+    });
+
+    conn.on("ReceiveToken", (token) => {
+        typing.style.display = 'block';
+        if (!bufEl) {
+            bufEl = document.createElement('div');
+            bufEl.style.margin = '8px 0';
+            bufEl.style.background = '#f7f7f8';
+            bufEl.style.padding = '12px';
+            bufEl.style.borderRadius = '8px';
+            chat.appendChild(bufEl);
+            rawText = ""; // reset for new message
+        }
+
+        rawText += token;
+        bufEl.innerHTML = marked.parse(rawText);
+        chat.scrollTop = chat.scrollHeight;
+    });
+
+    conn.on("CompleteMessage", (_full) => {
+        typing.style.display = 'none';
+        bufEl = null;
+        rawText = "";
+        chat.scrollTop = chat.scrollHeight;
+    });
+
+    async function start() {
+        try { await conn.start(); } catch (e) { console.error(e); setTimeout(start, 1500); }
+    }
+    start();
+
+    async function send() {
+        const text = input.value.trim();
+        if (!text) return;
+        input.value = "";
+
+        // Add local user message immediately (so user message is on top)
+        appendUserDiv(text);
+
+        // Track this local message so server echo doesn't duplicate it
+        pendingLocalMessages.set(text, (pendingLocalMessages.get(text) || 0) + 1);
+
+        // Then create AI placeholder below the user message
+        if (!bufEl) {
+            bufEl = document.createElement('div');
+            bufEl.style.margin = '8px 0';
+            bufEl.style.background = '#f7f7f8';
+            bufEl.style.padding = '12px';
+            bufEl.style.borderRadius = '8px';
+            bufEl.innerHTML = '<em></em>';
+            chat.appendChild(bufEl);
+            rawText = "";
+            chat.scrollTop = chat.scrollHeight;
+        }
+
+        typing.style.display = 'block';
+        await conn.invoke("SendMessage", text);
+    }
+
+    sendBtn.addEventListener('click', send);
+    input.addEventListener('keydown', e => { if (e.key === 'Enter') send(); });
+</script>
+
