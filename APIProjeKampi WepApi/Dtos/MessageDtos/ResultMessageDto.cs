@@ -10,5 +10,8 @@
         public DateTime SendDate { get; set; }
 
         public bool IsRead { get; set; }
+
+        public string Status { get; set; }
+
     }
 }
