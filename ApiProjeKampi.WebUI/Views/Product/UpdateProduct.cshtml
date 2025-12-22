@@ -23,8 +23,7 @@
                             <input type="text" asp-for="Price" class="form-control" />
                             <br />
                             <label>Ürün Kategorisi</label>
-                            <select asp-for="CategoryId" class="form-control" asp-items="(IEnumerable<SelectListItem>)
-                                                                                                                                                                          ViewBag.v">
+                            <select asp-for="CategoryId" class="form-control" asp-items="(IEnumerable<SelectListItem>)ViewBag.v">
                                 <option> Ürün Kategorisi Değiştirilemez! </option>
                             </select>
                             <br />
