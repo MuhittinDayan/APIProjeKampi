@@ -1,4 +1,5 @@
-﻿using APIProjeKampi_WepApi.Entities;
+﻿using APIProjeKampi_WepApi.Controllers;
+using APIProjeKampi_WepApi.Entities;
 using Microsoft.EntityFrameworkCore;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 using static System.Net.Mime.MediaTypeNames;
@@ -29,6 +30,8 @@ namespace APIProjeKampi_WepApi.Context
         public DbSet<YummyEvent> YummyEvents{ get; set; }
         public DbSet<Notification> Notifications{ get; set; }
         public DbSet<About> Abouts{ get; set; }
+        public DbSet<EmployeeTask> EmployeeTasks { get; set; }
+        public DbSet<EmployeeTaskChef> EmployeeTaskChefs { get; set; }
 
 
 
