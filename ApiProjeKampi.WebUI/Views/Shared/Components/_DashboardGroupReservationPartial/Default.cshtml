@@ -1,0 +1,136 @@
+﻿@model List<ApiProjeKampi.WebUI.Dtos.GroupReservationDtos.ResultGroupReservationDto>
+
+
+<div class="card shadow-sm border-0 rounded-4">
+    <div class="card-header d-flex justify-content-between align-items-center bg-white py-3">
+        <h4 class="fw-bold mb-0">Grup Rezervasyonları</h4>
+
+        <div class="position-relative">
+            <input type="text" class="form-control rounded-pill ps-4"
+                   placeholder="Rezervasyon ara...">
+            <i class="fas fa-search position-absolute top-50 end-0 translate-middle-y me-3 text-muted"></i>
+        </div>
+    </div>
+
+    <div class="card-body p-0">
+        <div class="table-responsive">
+            <table class="table align-middle table-hover mb-0">
+                <thead class="bg-light">
+                    <tr>
+                        <th></th>
+                        <th>Grup Başlığı</th>
+                        <th>Yetkili Kişi</th>
+                        <th>Durum</th>
+                        <th>Kişi</th>
+                        <th>Son İşlem</th>
+                        <th>Rezervasyon</th>
+                        <th>Öncelik</th>
+                        <th></th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        string statusClass = item.ReservationStatus switch
+                        {
+                            "Onaylandı" => "badge-success",
+                            "Bekleniyor" => "badge-warning",
+                            "İptal Edildi" => "badge-danger",
+                            _ => "badge-secondary"
+                        };
+
+                        string statusIcon = item.ReservationStatus switch
+                        {
+                            "Onaylandı" => "fas fa-check-circle",
+                            "Bekleniyor" => "fas fa-hourglass-half",
+                            "İptal Edildi" => "fas fa-times-circle",
+                            _ => "fas fa-info-circle"
+                        };
+
+                        string priorityIcon = item.Priority switch
+                        {
+                            "Yüksek" => "fas fa-exclamation-circle text-danger",
+                            "Orta" => "fas fa-chevron-up text-warning",
+                            "Düşük" => "fas fa-minus-circle text-success",
+                            _ => "fas fa-circle"
+                        };
+
+                        <tr class="table-row-modern">
+
+                            <!-- Checkbox -->
+                            <td style="width: 35px;">
+                                <input type="checkbox" />
+                            </td>
+
+                            <!-- Group Title -->
+                            <td class="fw-semibold">
+                                <i class="fas fa-users text-primary me-2"></i>
+                                @item.GroupTitle
+                            </td>
+
+                            <!-- Responsible Person -->
+                            <td>
+                                <i class="fas fa-user text-secondary me-2"></i>
+                                @item.ResponsibleCustomerName
+                            </td>
+
+                            <!-- Status -->
+                            <td>
+                                <span class="badge @statusClass px-3 py-2 rounded-pill">
+                                    <i class="@statusIcon me-1"></i>
+                                    @item.ReservationStatus
+                                </span>
+                            </td>
+
+                            <!-- Person Count -->
+                            <td>
+                                <i class="fas fa-user-friends text-info me-2"></i>
+                                @item.PersonCount
+                            </td>
+
+                            <!-- Last Process Date -->
+                            <td>
+                                <i class="fas fa-calendar-alt text-warning me-2"></i>
+                                @item.LastProcessDate.ToString("dd-MMM-yyyy")
+                            </td>
+
+                            <!-- Reservation Date -->
+                            <td>
+                                <i class="fas fa-calendar-check text-success me-2"></i>
+                                @item.ReservationDate.ToString("dd-MMM-yyyy")
+                            </td>
+
+                            <!-- Priority -->
+                            <td>
+                                <span class="badge bg-light text-dark px-3 py-2 rounded-pill">
+                                    <i class="@priorityIcon me-1"></i>
+                                    @item.Priority
+                                </span>
+                            </td>
+
+                            <!-- Details Button -->
+                            <td>
+                                <a href="#" class="btn btn-outline-primary btn-sm rounded-pill px-3">
+                                    <i class="fas fa-info-circle me-1"></i>
+                                    Detaylar
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<style>
+    .table-row-modern:hover {
+        background-color: #f8f9fa !important;
+        transition: 0.2s ease-in-out;
+    }
+
+    .rounded-4 {
+        border-radius: 1rem !important;
+    }
+</style>

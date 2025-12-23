@@ -1,6 +1,7 @@
 ﻿using APIProjeKampi_WepApi.Dtos.AboutDtos;
 using APIProjeKampi_WepApi.Dtos.CategoryDtos;
 using APIProjeKampi_WepApi.Dtos.FeatureDtos;
+using APIProjeKampi_WepApi.Dtos.GroupReservationDtos;
 using APIProjeKampi_WepApi.Dtos.ImageDtos;
 using APIProjeKampi_WepApi.Dtos.MessagedDtos;
 using APIProjeKampi_WepApi.Dtos.NotificationDtos;
@@ -52,6 +53,11 @@ namespace APIProjeKampi_WepApi.Mapping
             CreateMap<Image, CreateImageDto>().ReverseMap();
             CreateMap<Image, UpdateImageDto>().ReverseMap();
             CreateMap<Image, GetImageByIdDto>().ReverseMap();
+
+            CreateMap<GroupReservation , ResultGroupReservationDto>().ReverseMap();
+            CreateMap<GroupReservation , CreatGroupReservationDto>().ReverseMap();
+            CreateMap<GroupReservation , UpdateGroupReservationDto>().ReverseMap();
+            CreateMap<GroupReservation , GetGroupReservationByIdDto>().ReverseMap();
 
 
         }
