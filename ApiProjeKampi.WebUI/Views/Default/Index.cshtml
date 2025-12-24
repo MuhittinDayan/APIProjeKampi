@@ -57,7 +57,7 @@
                     <div class="col-lg-4 reservation-img" style="background-image: url(/yummy-red-1.0.0/assets/img/reservation.jpg);"></div>
 
                     <div class="col-lg-8 d-flex align-items-center reservation-form-bg" data-aos="fade-up" data-aos-delay="200">
-                        <form method="post" role="form" >
+                        <form method="post" role="form" class="php-email-form">
                             <div class="row gy-4">
                                 <div class="col-lg-4 col-md-6">
                                     <input type="text" asp-for="NameSurname" class="form-control" id="name" placeholder="Adınız Soyadınız" required="">
@@ -80,15 +80,13 @@
                             </div>
 
                             <div class="form-group mt-3">
-                                <textarea class="form-control" asp-for="Message" rows="5" placeholder="Eklemek İstedikleriniz"></textarea>
+                                <textarea class="form-control" asp-for="Message" rows="5" placeholder="Eklemedik İstedikleriniz"></textarea>
                             </div>
 
                             <div class="text-center mt-3">
                                 <div class="loading">Loading</div>
                                 <div class="error-message"></div>
-                                <div class="sent-message">Rezervasyon talebiniz alınmıştır. Ekip arkadaşlarımız size en kısa süre içinde
-                                    telefon ya da e-mail üzerinden dönüş sağlayacaklardır. Teşekkürler, görüşmek üzere!
-                                </div>
+                                <div class="sent-message">Rezervasyon talebiniz alınmıştır. ekip arkadaşlarımız size en kısa süre içinde telefon ya da e-mail üzerinden dönüş sağlayacaktır. Teşekkürler, görüşmek üzere!</div>
                                 <button type="submit">Rezervasyon Yapın</button>
                             </div>
                         </form>
