@@ -89,7 +89,7 @@ Proje, Backend ve Frontend katmanlarının net bir şekilde ayrıldığı modül
 
 ---
 
-📸 Proje Ekran Görüntüleri (Screenshots)
+## 📸 Proje Ekran Görüntüleri (Screenshots)
 <details> <summary><b>🖥️ Kullanıcı Arayüzü (Web UI) - Tıkla ve Gör</b></summary>
 
 
